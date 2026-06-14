@@ -1,0 +1,167 @@
+regular_season_standings = [
+    {
+        "rank": 1,
+        "team": "BLCK",
+        "match_wins": 13,
+        "match_losses": 1,
+        "game_wins": 26,
+        "game_losses": 7,
+        "game_diff": 19,
+    },
+    {
+        "rank": 2,
+        "team": "ONIC",
+        "match_wins": 8,
+        "match_losses": 6,
+        "game_wins": 21,
+        "game_losses": 16,
+        "game_diff": 5,
+    },
+    {
+        "rank": 3,
+        "team": "NXPE",
+        "match_wins": 6,
+        "match_losses": 8,
+        "game_wins": 18,
+        "game_losses": 20,
+        "game_diff": -2,
+    },
+    {
+        "rank": 4,
+        "team": "RSG",
+        "match_wins": 7,
+        "match_losses": 7,
+        "game_wins": 17,
+        "game_losses": 17,
+        "game_diff": 0,
+    },
+    {
+        "rank": 5,
+        "team": "ECHO",
+        "match_wins": 5,
+        "match_losses": 9,
+        "game_wins": 15,
+        "game_losses": 20,
+        "game_diff": -5,
+    },
+    {
+        "rank": 6,
+        "team": "OMG",
+        "match_wins": 4,
+        "match_losses": 10,
+        "game_wins": 13,
+        "game_losses": 18,
+        "game_diff": -5,
+    },
+    {
+        "rank": 7,
+        "team": "BREN",
+        "match_wins": 4,
+        "match_losses": 10,
+        "game_wins": 14,
+        "game_losses": 21,
+        "game_diff": -7,
+    },
+    {
+        "rank": 8,
+        "team": "TNC",
+        "match_wins": 3,
+        "match_losses": 11,
+        "game_wins": 10,
+        "game_losses": 22,
+        "game_diff": -12,
+    }
+]
+
+head_to_head_data = {
+    1: [  # BLCK
+        {"opponent_rank": 2, "win": 2, "loss": 3, "series": [[2, 1], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 3, "win": 4, "loss": 2, "series": [[2, 1], [2, 1]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 4, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 5, "win": 4, "loss": 1, "series": [[2, 1], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 6, "win": 4, "loss": 1, "series": [[2, 1], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 7, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 8, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+    ],
+
+    2: [  # ONIC
+        {"opponent_rank": 1, "win": 3, "loss": 2, "series": [[1, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 3, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 4, "win": 3, "loss": 3, "series": [[1, 2], [2, 1]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 5, "win": 3, "loss": 2, "series": [[2, 0], [1, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 6, "win": 4, "loss": 2, "series": [[2, 1], [2, 1]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 7, "win": 2, "loss": 2, "series": [[2, 0], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 8, "win": 2, "loss": 2, "series": [[2, 0], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+    ],
+
+    3: [  # NXPE
+        {"opponent_rank": 1, "win": 2, "loss": 4, "series": [[1, 2], [1, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 2, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 4, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 5, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 6, "win": 4, "loss": 2, "series": [[2, 1], [2, 1]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 7, "win": 2, "loss": 4, "series": [[1, 2], [1, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 8, "win": 2, "loss": 2, "series": [[0, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+    ],
+
+    4: [  # RSG
+        {"opponent_rank": 1, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 2, "win": 3, "loss": 3, "series": [[2, 1], [1, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 3, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 5, "win": 4, "loss": 2, "series": [[2, 1], [2, 1]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 6, "win": 2, "loss": 2, "series": [[0, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 7, "win": 4, "loss": 2, "series": [[2, 1], [2, 1]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 8, "win": 2, "loss": 2, "series": [[2, 0], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+    ],
+
+    5: [  # ECHO
+        {"opponent_rank": 1, "win": 1, "loss": 4, "series": [[1, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 2, "win": 2, "loss": 3, "series": [[0, 2], [2, 1]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 3, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 4, "win": 2, "loss": 4, "series": [[1, 2], [1, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 6, "win": 2, "loss": 2, "series": [[2, 0], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 7, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 8, "win": 4, "loss": 1, "series": [[2, 0], [2, 1]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+    ],
+
+    6: [  # OMG
+        {"opponent_rank": 1, "win": 1, "loss": 4, "series": [[1, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 2, "win": 2, "loss": 4, "series": [[1, 2], [1, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 3, "win": 2, "loss": 4, "series": [[1, 2], [1, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 4, "win": 2, "loss": 2, "series": [[2, 0], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 5, "win": 2, "loss": 2, "series": [[0, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 7, "win": 2, "loss": 2, "series": [[0, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 8, "win": 4, "loss": 0, "series": [[2, 0], [2, 0]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+    ],
+
+    7: [  # BREN
+        {"opponent_rank": 1, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 2, "win": 2, "loss": 2, "series": [[0, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 3, "win": 4, "loss": 2, "series": [[2, 1], [2, 1]], "series_win": 2, "series_loss": 0, "series_win_rate": 100.0},
+        {"opponent_rank": 4, "win": 2, "loss": 4, "series": [[1, 2], [1, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 5, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 6, "win": 2, "loss": 2, "series": [[2, 0], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 8, "win": 2, "loss": 3, "series": [[0, 2], [2, 1]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+    ],
+
+    8: [  # TNC
+        {"opponent_rank": 1, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 2, "win": 2, "loss": 2, "series": [[0, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 3, "win": 2, "loss": 2, "series": [[2, 0], [0, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 4, "win": 2, "loss": 2, "series": [[0, 2], [2, 0]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+        {"opponent_rank": 5, "win": 1, "loss": 4, "series": [[0, 2], [1, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 6, "win": 0, "loss": 4, "series": [[0, 2], [0, 2]], "series_win": 0, "series_loss": 2, "series_win_rate": 0.0},
+        {"opponent_rank": 7, "win": 3, "loss": 2, "series": [[2, 0], [1, 2]], "series_win": 1, "series_loss": 1, "series_win_rate": 50.0},
+    ],
+}
+
+latest_games_win_rate = [
+    {"rank_id": 1, "team": "Blacklist International", "ticker": "BLCK", "matches_played": 7, "series_wins": 6, "series_losses": 1, "win_match": 12, "loss_match": 3, "win_series_rate_percentage": 85.71, "win_match_rate_percentage": 80.0},
+    {"rank_id": 2, "team": "ONIC Philippines", "ticker": "ONIC", "matches_played": 7, "series_wins": 4, "series_losses": 3, "win_match": 9, "loss_match": 8, "win_series_rate_percentage": 57.14, "win_match_rate_percentage": 52.94},
+    {"rank_id": 3, "team": "Nexplay EVOS", "ticker": "NXPE", "matches_played": 7, "series_wins": 4, "series_losses": 3, "win_match": 10, "loss_match": 7, "win_series_rate_percentage": 57.14, "win_match_rate_percentage": 58.82},
+    {"rank_id": 4, "team": "RSG Philippines", "ticker": "RSG", "matches_played": 7, "series_wins": 3, "series_losses": 4, "win_match": 7, "loss_match": 9, "win_series_rate_percentage": 42.86, "win_match_rate_percentage": 43.75},
+    {"rank_id": 5, "team": "ECHO", "ticker": "ECHO", "matches_played": 7, "series_wins": 3, "series_losses": 4, "win_match": 7, "loss_match": 10, "win_series_rate_percentage": 42.86, "win_match_rate_percentage": 41.18},
+    {"rank_id": 6, "team": "Omega Esports", "ticker": "OMG", "matches_played": 7, "series_wins": 3, "series_losses": 4, "win_match": 8, "loss_match": 8, "win_series_rate_percentage": 42.86, "win_match_rate_percentage": 50.0},
+    {"rank_id": 7, "team": "AP.Bren", "ticker": "BREN", "matches_played": 7, "series_wins": 4, "series_losses": 3, "win_match": 8, "loss_match": 9, "win_series_rate_percentage": 57.14, "win_match_rate_percentage": 47.06},
+    {"rank_id": 8, "team": "TNC Pro Team", "ticker": "TNC", "matches_played": 7, "series_wins": 2, "series_losses": 5, "win_match": 6, "loss_match": 10, "win_series_rate_percentage": 28.57, "win_match_rate_percentage": 37.5},
+]

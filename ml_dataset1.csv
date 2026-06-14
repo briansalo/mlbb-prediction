@@ -1,0 +1,7 @@
+overall_match_win_diff,overall_match_loss_diff,overall_game_won_diff,overall_game_loss_diff,head_to_head_win_diff,head_to_head_loss_diff,latest_game_win_rate_percentage_diff,win
+4,-4,5,-7,4,1,25.0,1.0
+-4,4,-5,7,-4,-1,-25.0,0.0
+4,-4,5,-7,4,1,25.0,
+-4,4,-5,7,-4,-1,-25.0,
+1,-1,-2,0,2,3,0.0,
+-1,1,2,0,-2,-3,-0.0,
