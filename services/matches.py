@@ -147,11 +147,13 @@ def get_head_to_head_diff(matches, team_a_ticker, team_b_ticker):
         "head_to_head_game_loss": 0,
         "head_to_head_game_win_diff": 0,
         "head_to_head_game_loss_diff": 0,
+        "head_to_head_game_win_rate_diff": 0,
 
         "head_to_head_series_win": 0,
         "head_to_head_series_loss": 0,
         "head_to_head_series_win_diff": 0,
         "head_to_head_series_loss_diff": 0,
+        "head_to_head_series_win_rate_diff": 0,
 
         "matches_found": 0,
         "series": []
@@ -213,6 +215,36 @@ def get_head_to_head_diff(matches, team_a_ticker, team_b_ticker):
         team_a_base["head_to_head_series_win"]
     )
 
+    team_a_game_win_rate = get_win_rate(
+        team_a_base["head_to_head_game_win"],
+        team_a_base["head_to_head_game_loss"]
+    )
+
+    team_b_game_win_rate = get_win_rate(
+        team_a_base["head_to_head_game_loss"],
+        team_a_base["head_to_head_game_win"]
+    )
+
+    team_a_series_win_rate = get_win_rate(
+        team_a_base["head_to_head_series_win"],
+        team_a_base["head_to_head_series_loss"]
+    )
+
+    team_b_series_win_rate = get_win_rate(
+        team_a_base["head_to_head_series_loss"],
+        team_a_base["head_to_head_series_win"]
+    )
+
+    team_a_base["head_to_head_game_win_rate_diff"] = round(
+        team_a_game_win_rate - team_b_game_win_rate,
+        2
+    )
+
+    team_a_base["head_to_head_series_win_rate_diff"] = round(
+        team_a_series_win_rate - team_b_series_win_rate,
+        2
+    )
+
     team_b_base = {
         "team_a": team_b_ticker,
         "team_b": team_a_ticker,
@@ -222,12 +254,14 @@ def get_head_to_head_diff(matches, team_a_ticker, team_b_ticker):
 
         "head_to_head_game_win_diff": -team_a_base["head_to_head_game_win_diff"],
         "head_to_head_game_loss_diff": -team_a_base["head_to_head_game_loss_diff"],
+        "head_to_head_game_win_rate_diff": -team_a_base["head_to_head_game_win_rate_diff"],
 
         "head_to_head_series_win": team_a_base["head_to_head_series_loss"],
         "head_to_head_series_loss": team_a_base["head_to_head_series_win"],
 
         "head_to_head_series_win_diff": -team_a_base["head_to_head_series_win_diff"],
         "head_to_head_series_loss_diff": -team_a_base["head_to_head_series_loss_diff"],
+        "head_to_head_series_win_rate_diff": -team_a_base["head_to_head_series_win_rate_diff"],
 
         "matches_found": team_a_base["matches_found"],
         "series": [
@@ -240,7 +274,15 @@ def get_head_to_head_diff(matches, team_a_ticker, team_b_ticker):
         "team_a_base": team_a_base,
         "team_b_base": team_b_base
     }
-    
+
+def get_win_rate(win, loss):
+    total = win + loss
+
+    if total == 0:
+        return 0
+
+    return round((win / total) * 100, 2)
+   
 def get_team_diff(standings, team_a_ticker, team_b_ticker):
     team_a = None
     team_b = None
@@ -258,50 +300,51 @@ def get_team_diff(standings, team_a_ticker, team_b_ticker):
     if team_b is None:
         raise ValueError(f"Team not found: {team_b_ticker}")
 
+    team_a_game_win_rate = get_win_rate(team_a["game_win"], team_a["game_loss"])
+    team_b_game_win_rate = get_win_rate(team_b["game_win"], team_b["game_loss"])
+
+    team_a_series_win_rate = get_win_rate(team_a["series_win"], team_a["series_loss"])
+    team_b_series_win_rate = get_win_rate(team_b["series_win"], team_b["series_loss"])
+
     team_a_base = {
         "team_a": team_a_ticker,
         "team_b": team_b_ticker,
 
-        "game_win_diff":
-            team_a["game_win"] - team_b["game_win"],
+        "game_win_diff": team_a["game_win"] - team_b["game_win"],
+        "game_loss_diff": team_a["game_loss"] - team_b["game_loss"],
 
-        "game_loss_diff":
-            team_a["game_loss"] - team_b["game_loss"],
+        "game_win_rate_diff": round(team_a_game_win_rate - team_b_game_win_rate, 2),
 
-        "series_win_diff":
-            team_a["series_win"] - team_b["series_win"],
+        "series_win_diff": team_a["series_win"] - team_b["series_win"],
+        "series_loss_diff": team_a["series_loss"] - team_b["series_loss"],
 
-        "series_loss_diff":
-            team_a["series_loss"] - team_b["series_loss"],
+        "series_win_rate_diff": round(team_a_series_win_rate - team_b_series_win_rate, 2),
 
-        "rank_diff":
-            team_a["rank"] - team_b["rank"]
+        "rank_diff": team_a["rank"] - team_b["rank"]
     }
 
     team_b_base = {
         "team_a": team_b_ticker,
         "team_b": team_a_ticker,
 
-        "game_win_diff":
-            team_b["game_win"] - team_a["game_win"],
+        "game_win_diff": team_b["game_win"] - team_a["game_win"],
+        "game_loss_diff": team_b["game_loss"] - team_a["game_loss"],
 
-        "game_loss_diff":
-            team_b["game_loss"] - team_a["game_loss"],
+        "game_win_rate_diff": round(team_b_game_win_rate - team_a_game_win_rate, 2),
 
-        "series_win_diff":
-            team_b["series_win"] - team_a["series_win"],
+        "series_win_diff": team_b["series_win"] - team_a["series_win"],
+        "series_loss_diff": team_b["series_loss"] - team_a["series_loss"],
 
-        "series_loss_diff":
-            team_b["series_loss"] - team_a["series_loss"],
+        "series_win_rate_diff": round(team_b_series_win_rate - team_a_series_win_rate, 2),
 
-        "rank_diff":
-            team_b["rank"] - team_a["rank"]
+        "rank_diff": team_b["rank"] - team_a["rank"]
     }
 
     return {
         "team_a_base": team_a_base,
         "team_b_base": team_b_base
     }
+
 def get_team_records(matches):
     records = defaultdict(lambda: {
         "team": "",

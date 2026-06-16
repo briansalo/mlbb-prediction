@@ -17,7 +17,7 @@ model = XGBClassifier()
 # train
 model.fit(X, y)
 
-joblib.dump(model, "mlbb_model.pkl")
+joblib.dump(model, "mlbb_model-id-10-rate.pkl")
 
 print("Model trained and saved.")
 print("Training complete")
