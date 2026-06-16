@@ -1,61 +1,26 @@
 import joblib
-from services.matches import get_team_records, get_team_diff, get_head_to_head_diff, get_latest_matches_record, get_latest_match_diff
-from data.matches.id.id_season_13_matches import matches
 from pprint import pprint
+from services.predict import predict_matchup
+from services.matches import get_team_records
+from data.matches.id.id_season_17_matches import matches
+from data.matchups.id.season_17 import matchups
 
-model = joblib.load("mlbb_model-id-10-rate.pkl")
 standings = get_team_records(matches)
-overall_team_diff = get_team_diff(
-    standings,
-    "ONIC",
-    "EVOS"
-)
 
-head_to_head_diff = get_head_to_head_diff(
-    matches,
-    "ONIC",
-    "EVOS"
-)
-latest_match_diff = get_latest_match_diff(
-    matches,
-    "ONIC",
-    "EVOS"
-)
-# result = [
-#     overall_team_diff["team_a_base"]["rank_diff"],
-#     overall_team_diff["team_a_base"]["series_win_diff"],
-#     overall_team_diff["team_a_base"]["series_loss_diff"],
-#     overall_team_diff["team_a_base"]["game_win_diff"],
-#     overall_team_diff["team_a_base"]["game_loss_diff"],
-#     head_to_head_diff["team_a_base"]["head_to_head_game_win"],
-#     head_to_head_diff["team_a_base"]["head_to_head_game_loss"],
-#     head_to_head_diff["team_a_base"]["head_to_head_series_win"],
-#     head_to_head_diff["team_a_base"]["head_to_head_series_loss"],
-#     latest_match_diff["team_a_base"]["latest_game_win_diff"],
-#     latest_match_diff["team_a_base"]["latest_game_loss_diff"],
-#     latest_match_diff["team_a_base"]["latest_series_win_diff"],
-#     latest_match_diff["team_a_base"]["latest_series_loss_diff"],
-#     0,
-#     0,
-#     0,
-#     0,
-#     0
-#     ]
-result = [
-    overall_team_diff["team_a_base"]["rank_diff"],
-    overall_team_diff["team_a_base"]["game_win_rate_diff"],
-    overall_team_diff["team_a_base"]["series_win_rate_diff"],
-    head_to_head_diff["team_a_base"]["head_to_head_game_win_rate_diff"],
-    head_to_head_diff["team_a_base"]["head_to_head_series_win_rate_diff"],
-    latest_match_diff["team_a_base"]["latest_series_win_rate_percentage_diff"],
-    latest_match_diff["team_a_base"]["latest_game_win_rate_percentage_diff"],
-]
-pprint(result)
-new_match = [result]
+for matchup in matchups:
+    team_a = matchup["team_a"]
+    team_b = matchup["team_b"]
+    model_name = "models/id/mlbb-id-14-rate.pkl"
+    model = joblib.load(model_name)
+    result = predict_matchup(model_name, standings, matches, team_a, team_b)
 
-prediction = model.predict(new_match)
-probability = model.predict_proba(new_match)
+    pprint(result)
+    new_match = [result]
 
-print(f"Prediction: {prediction[0]}")
-print(f"Win Probability: {probability[0][1] * 100:.2f}%")
-print(f"Lose Probability: {probability[0][0] * 100:.2f}%")
+    prediction = model.predict(new_match)
+    probability = model.predict_proba(new_match)
+
+    print(f"----Prediction for {team_a} vs {team_b} -----")
+    print(f"Win Probability: {probability[0][1] * 100:.2f}%")
+    print(f"Lose Probability: {probability[0][0] * 100:.2f}%")
+    print(f"---------------")

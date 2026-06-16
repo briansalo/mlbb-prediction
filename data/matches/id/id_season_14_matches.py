@@ -1,27 +1,27 @@
-[
+matches =[
   {
     "match_id": 1,
     "week": "Week 1",
     "date_time": "August 9, 2024 - 16:15 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 2,
     "team_b": "Team Liquid ID",
     "team_b_ticker": "TLID",
     "score_b": 0,
     "winner": "Fnatic ONIC",
     "winner_team": "a",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "a",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "22:02",
     "game_2_winner_team": "a",
-    "game_2_winner_ticker": "FNOC",
+    "game_2_winner_ticker": "ONIC",
     "game_2_duration": "17:15",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 2,
@@ -67,9 +67,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "23:06",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 4,
@@ -91,9 +91,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "18:05",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 5,
@@ -127,20 +127,20 @@
     "team_a_ticker": "RBL",
     "score_a": 1,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 2,
     "winner": "Fnatic ONIC",
     "winner_team": "b",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "b",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "14:08",
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RBL",
     "game_2_duration": "14:03",
     "game_3_winner_team": "b",
-    "game_3_winner_ticker": "FNOC",
+    "game_3_winner_ticker": "ONIC",
     "game_3_duration": "10:13"
   },
   {
@@ -187,9 +187,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "DEWA",
     "game_2_duration": "19:24",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 9,
@@ -211,9 +211,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "18:46",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 10,
@@ -259,9 +259,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "16:37",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 12,
@@ -271,7 +271,7 @@
     "team_a_ticker": "RRQ",
     "score_a": 2,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 0,
     "winner": "RRQ Hoshi",
     "winner_team": "a",
@@ -283,9 +283,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "22:57",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 13,
@@ -331,9 +331,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "10:43",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 15,
@@ -343,21 +343,21 @@
     "team_a_ticker": "AE",
     "score_a": 0,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 2,
     "winner": "Fnatic ONIC",
     "winner_team": "b",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "b",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "14:11",
     "game_2_winner_team": "b",
-    "game_2_winner_ticker": "FNOC",
+    "game_2_winner_ticker": "ONIC",
     "game_2_duration": "15:15",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 16,
@@ -379,16 +379,16 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "TLID",
     "game_2_duration": "15:14",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 17,
     "week": "Week 3",
     "date_time": "August 23, 2024 - 16:15 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 1,
     "team_b": "Geek Fam ID",
     "team_b_ticker": "GEEK",
@@ -401,7 +401,7 @@
     "game_1_winner_ticker": "GEEK",
     "game_1_duration": "25:01",
     "game_2_winner_team": "a",
-    "game_2_winner_ticker": "FNOC",
+    "game_2_winner_ticker": "ONIC",
     "game_2_duration": "18:35",
     "game_3_winner_team": "b",
     "game_3_winner_ticker": "GEEK",
@@ -427,9 +427,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "DEWA",
     "game_2_duration": "20:18",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 19,
@@ -499,9 +499,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "TLID",
     "game_2_duration": "15:25",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 22,
@@ -547,9 +547,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "10:57",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 24,
@@ -580,23 +580,23 @@
     "week": "Week 4",
     "date_time": "August 30, 2024 - 16:15 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 2,
     "team_b": "Dewa United",
     "team_b_ticker": "DEWA",
     "score_b": 1,
     "winner": "Fnatic ONIC",
     "winner_team": "a",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "a",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "24:46",
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "DEWA",
     "game_2_duration": "12:35",
     "game_3_winner_team": "a",
-    "game_3_winner_ticker": "FNOC",
+    "game_3_winner_ticker": "ONIC",
     "game_3_duration": "15:52"
   },
   {
@@ -652,23 +652,23 @@
     "week": "Week 4",
     "date_time": "August 31, 2024 - 18:30 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 2,
     "team_b": "Bigetron Alpha",
     "team_b_ticker": "BTR",
     "score_b": 1,
     "winner": "Fnatic ONIC",
     "winner_team": "a",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "a",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "15:38",
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "18:38",
     "game_3_winner_team": "a",
-    "game_3_winner_ticker": "FNOC",
+    "game_3_winner_ticker": "ONIC",
     "game_3_duration": "11:45"
   },
   {
@@ -715,9 +715,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RBL",
     "game_2_duration": "20:16",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 31,
@@ -763,9 +763,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "AE",
     "game_2_duration": "13:41",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 33,
@@ -787,9 +787,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "GEEK",
     "game_2_duration": "17:07",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 34,
@@ -799,21 +799,21 @@
     "team_a_ticker": "EVOS",
     "score_a": 0,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 2,
     "winner": "Fnatic ONIC",
     "winner_team": "b",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "b",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "17:22",
     "game_2_winner_team": "b",
-    "game_2_winner_ticker": "FNOC",
+    "game_2_winner_ticker": "ONIC",
     "game_2_duration": "15:10",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 35,
@@ -859,9 +859,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "TLID",
     "game_2_duration": "20:02",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 37,
@@ -883,9 +883,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "13:54",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 38,
@@ -907,9 +907,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "AE",
     "game_2_duration": "25:38",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 39,
@@ -919,7 +919,7 @@
     "team_a_ticker": "GEEK",
     "score_a": 2,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 0,
     "winner": "Geek Fam ID",
     "winner_team": "a",
@@ -931,9 +931,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "GEEK",
     "game_2_duration": "16:22",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 40,
@@ -1027,9 +1027,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "DEWA",
     "game_2_duration": "19:01",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 44,
@@ -1060,7 +1060,7 @@
     "week": "Week 6",
     "date_time": "September 14, 2024 - 21:30 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 0,
     "team_b": "RRQ Hoshi",
     "team_b_ticker": "RRQ",
@@ -1075,9 +1075,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "13:27",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 46,
@@ -1099,9 +1099,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "AE",
     "game_2_duration": "15:07",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 47,
@@ -1111,7 +1111,7 @@
     "team_a_ticker": "TLID",
     "score_a": 2,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 0,
     "winner": "Team Liquid ID",
     "winner_team": "a",
@@ -1123,9 +1123,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "TLID",
     "game_2_duration": "11:54",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 48,
@@ -1171,9 +1171,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "GEEK",
     "game_2_duration": "13:31",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 50,
@@ -1195,9 +1195,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "TLID",
     "game_2_duration": "17:05",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 51,
@@ -1219,9 +1219,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "DEWA",
     "game_2_duration": "10:25",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 52,
@@ -1252,7 +1252,7 @@
     "week": "Week 7",
     "date_time": "September 21, 2024 - 21:30 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 0,
     "team_b": "Rebellion Esports",
     "team_b_ticker": "RBL",
@@ -1267,9 +1267,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "RBL",
     "game_2_duration": "12:40",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 54,
@@ -1291,9 +1291,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "11:03",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 55,
@@ -1315,9 +1315,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "14:22",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 56,
@@ -1363,9 +1363,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "TLID",
     "game_2_duration": "18:06",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 58,
@@ -1387,9 +1387,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "12:07",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 59,
@@ -1435,9 +1435,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "AE",
     "game_2_duration": "18:24",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 61,
@@ -1447,20 +1447,20 @@
     "team_a_ticker": "BTR",
     "score_a": 1,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 2,
     "winner": "Fnatic ONIC",
     "winner_team": "b",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "a",
     "game_1_winner_ticker": "BTR",
     "game_1_duration": "21:07",
     "game_2_winner_team": "b",
-    "game_2_winner_ticker": "FNOC",
+    "game_2_winner_ticker": "ONIC",
     "game_2_duration": "19:48",
     "game_3_winner_team": "b",
-    "game_3_winner_ticker": "FNOC",
+    "game_3_winner_ticker": "ONIC",
     "game_3_duration": "13:30"
   },
   {
@@ -1492,24 +1492,24 @@
     "week": "Week 8",
     "date_time": "September 29, 2024 - 18:30 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 2,
     "team_b": "EVOS Glory",
     "team_b_ticker": "EVOS",
     "score_b": 0,
     "winner": "Fnatic ONIC",
     "winner_team": "a",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "a",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "15:15",
     "game_2_winner_team": "a",
-    "game_2_winner_ticker": "FNOC",
+    "game_2_winner_ticker": "ONIC",
     "game_2_duration": "28:07",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 64,
@@ -1555,9 +1555,9 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "18:21",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 66,
@@ -1636,24 +1636,24 @@
     "week": "Week 9",
     "date_time": "October 5, 2024 - 21:30 PHT",
     "team_a": "Fnatic ONIC",
-    "team_a_ticker": "FNOC",
+    "team_a_ticker": "ONIC",
     "score_a": 2,
     "team_b": "Alter Ego",
     "team_b_ticker": "AE",
     "score_b": 0,
     "winner": "Fnatic ONIC",
     "winner_team": "a",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "a",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "11:23",
     "game_2_winner_team": "a",
-    "game_2_winner_ticker": "FNOC",
+    "game_2_winner_ticker": "ONIC",
     "game_2_duration": "18:01",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 70,
@@ -1663,20 +1663,20 @@
     "team_a_ticker": "DEWA",
     "score_a": 1,
     "team_b": "Fnatic ONIC",
-    "team_b_ticker": "FNOC",
+    "team_b_ticker": "ONIC",
     "score_b": 2,
     "winner": "Fnatic ONIC",
     "winner_team": "b",
-    "winner_ticker": "FNOC",
+    "winner_ticker": "ONIC",
     "best_of": "Bo3",
     "game_1_winner_team": "b",
-    "game_1_winner_ticker": "FNOC",
+    "game_1_winner_ticker": "ONIC",
     "game_1_duration": "13:45",
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "DEWA",
     "game_2_duration": "21:04",
     "game_3_winner_team": "b",
-    "game_3_winner_ticker": "FNOC",
+    "game_3_winner_ticker": "ONIC",
     "game_3_duration": "13:32"
   },
   {
@@ -1699,9 +1699,9 @@
     "game_2_winner_team": "b",
     "game_2_winner_ticker": "BTR",
     "game_2_duration": "19:58",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   },
   {
     "match_id": 72,
@@ -1723,8 +1723,8 @@
     "game_2_winner_team": "a",
     "game_2_winner_ticker": "RRQ",
     "game_2_duration": "15:09",
-    "game_3_winner_team": null,
-    "game_3_winner_ticker": null,
-    "game_3_duration": null
+    "game_3_winner_team": None,
+    "game_3_winner_ticker": None,
+    "game_3_duration": None
   }
 ]

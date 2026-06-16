@@ -1,5 +1,5 @@
 from collections import defaultdict
-
+from pprint import pprint
 def get_latest_match_diff(matches, team_a, team_b):
     a = get_latest_matches_record(matches, team_a)
     b = get_latest_matches_record(matches, team_b)
@@ -21,12 +21,12 @@ def get_latest_match_diff(matches, team_a, team_b):
             a["series_loss"] - b["series_loss"],
 
         "latest_game_win_rate_percentage_diff":
-            a["win_match_rate_percentage"] -
-            b["win_match_rate_percentage"],
+            round(a["win_match_rate_percentage"] -
+            b["win_match_rate_percentage"], 2),
 
         "latest_series_win_rate_percentage_diff":
-            a["win_series_rate_percentage"] -
-            b["win_series_rate_percentage"],
+            round(a["win_series_rate_percentage"] -
+            b["win_series_rate_percentage"], 2),
     }
 
     team_b_base = {
@@ -46,10 +46,10 @@ def get_latest_match_diff(matches, team_a, team_b):
             -team_a_base["latest_series_loss_diff"],
 
         "latest_game_win_rate_percentage_diff":
-            -team_a_base["latest_game_win_rate_percentage_diff"],
+            -round(team_a_base["latest_game_win_rate_percentage_diff"], 2),
 
         "latest_series_win_rate_percentage_diff":
-            -team_a_base["latest_series_win_rate_percentage_diff"],
+            -round(team_a_base["latest_series_win_rate_percentage_diff"], 2),
     }
 
     return {
@@ -416,3 +416,63 @@ def get_team_records(matches):
         team["rank"] = rank
 
     return standings
+
+def get_playoff_records(match):
+    records = defaultdict(lambda: {
+        "upper_game_win": 0,
+        "upper_game_loss": 0,
+        "upper_series_win": 0,
+        "upper_series_loss": 0,
+
+        "lower_game_win": 0,
+        "lower_game_loss": 0,
+        "lower_series_win": 0,
+        "lower_series_loss": 0,
+    })
+
+    team_a = match["team_a"]
+    team_b = match["team_b"]
+
+    team_a_score = match["team_a_score"]
+    team_b_score = match["team_b_score"]
+
+    is_upper = (
+        match.get("is_upper_quarter_final", 0) or
+        match.get("is_upper_semi_final", 0) or
+        match.get("is_upper_final", 0)
+    )
+
+    is_lower = (
+        match.get("is_lower_semi_final", 0) or
+        match.get("is_lower_final", 0)
+    )
+
+    if is_upper:
+        records[team_a]["upper_game_win"] += team_a_score
+        records[team_a]["upper_game_loss"] += team_b_score
+
+        records[team_b]["upper_game_win"] += team_b_score
+        records[team_b]["upper_game_loss"] += team_a_score
+
+        if match["is_team_a_win"]:
+            records[team_a]["upper_series_win"] += 1
+            records[team_b]["upper_series_loss"] += 1
+        else:
+            records[team_b]["upper_series_win"] += 1
+            records[team_a]["upper_series_loss"] += 1
+
+    elif is_lower:
+        records[team_a]["lower_game_win"] += team_a_score
+        records[team_a]["lower_game_loss"] += team_b_score
+
+        records[team_b]["lower_game_win"] += team_b_score
+        records[team_b]["lower_game_loss"] += team_a_score
+
+        if match["is_team_a_win"]:
+            records[team_a]["lower_series_win"] += 1
+            records[team_b]["lower_series_loss"] += 1
+        else:
+            records[team_b]["lower_series_win"] += 1
+            records[team_a]["lower_series_loss"] += 1
+
+    return dict(records)
