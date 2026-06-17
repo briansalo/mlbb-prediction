@@ -1,8 +1,12 @@
 
 from services.matches import get_playoff_records, get_team_records, get_team_diff, get_head_to_head_diff, get_latest_matches_record, get_latest_match_diff
 from services.input import prompt_compare
+from services.playoffs_matches import get_playoff_dataset
+from services.season_matches import get_season_dataset
+
 from services.export import csv
 from pprint import pprint
+from collections import defaultdict
 from data.matchups.id.season_14 import matchups
 from data.matches.id.id_season_14_matches import matches
 from data.matchups.id.season_4 import matchups as season_4_matchups
@@ -31,121 +35,99 @@ from data.matches.id.id_season_14_matches import matches as season_14_matches
 
 seasons = [
     (season_4_matchups, season_4_matches),
-    # (season_5_matchups, season_5_matches),
-    # (season_6_matchups, season_6_matches),
-    # (season_7_matchups, season_7_matches),
-    # (season_8_matchups, season_8_matches),
-    # (season_9_matchups, season_9_matches),
-    # (season_10_matchups, season_10_matches),
-    # (season_11_matchups, season_11_matches),
-    # (season_12_matchups, season_12_matches),
-    # (season_13_matchups, season_13_matches),
-    # (season_14_matchups, season_14_matches)
+    (season_5_matchups, season_5_matches),
+    (season_6_matchups, season_6_matches),
+    (season_7_matchups, season_7_matches),
+    (season_8_matchups, season_8_matches),
+    (season_9_matchups, season_9_matches),
+    (season_10_matchups, season_10_matches),
+    (season_11_matchups, season_11_matches),
+    (season_12_matchups, season_12_matches),
+    (season_13_matchups, season_13_matches),
+    (season_14_matchups, season_14_matches)
 ]
 
 
-def get_matchups(matchups, standings, matches):
-    dataset_name = "datasets/ml_dataset-id-s14-rate.csv"
-          
 
 
-    for matchup in matchups:
-        team_a = matchup["team_a"]
-        team_b = matchup["team_b"]
 
-        overall_team_diff = get_team_diff(
-            standings,
-            team_a,
-            team_b
-        )
-        
-        head_to_head_diff = get_head_to_head_diff(
-            matches,
-            team_a,
-            team_b
-        )
-
-        latest_match_diff = get_latest_match_diff(
-            matches,
-            team_a,
-            team_b
-        )
-
-        if "rate" in dataset_name:
-            result = {
-                "team_a_base" : {
-                    "overall_game_rank_diff": overall_team_diff["team_a_base"]["rank_diff"],
-                    "overall_game_win_rate_diff": overall_team_diff["team_a_base"]["game_win_rate_diff"],
-                    "overall_series_win_rate_diff": overall_team_diff["team_a_base"]["series_win_rate_diff"],
-                    "head_to_head_game_win_rate_diff": head_to_head_diff["team_a_base"]["head_to_head_game_win_rate_diff"],
-                    "head_to_head_series_win_rate_diff": head_to_head_diff["team_a_base"]["head_to_head_series_win_rate_diff"],
-                    "latest_series_win_rate_diff": latest_match_diff["team_a_base"]["latest_series_win_rate_percentage_diff"],
-                    "latest_game_win_rate_diff": latest_match_diff["team_a_base"]["latest_game_win_rate_percentage_diff"],
-                    "win": matchup["is_team_a_win"]
-                },
-                "team_b_base" : {
-                    "overall_game_rank_diff": overall_team_diff["team_b_base"]["rank_diff"],
-                    "overall_game_win_rate_diff": overall_team_diff["team_b_base"]["game_win_rate_diff"],
-                    "overall_series_win_rate_diff": overall_team_diff["team_b_base"]["series_win_rate_diff"],
-                    "head_to_head_game_win_rate_diff": head_to_head_diff["team_b_base"]["head_to_head_game_win_rate_diff"],
-                    "head_to_head_series_win_rate_diff": head_to_head_diff["team_b_base"]["head_to_head_series_win_rate_diff"],
-                    "latest_series_win_rate_diff": latest_match_diff["team_b_base"]["latest_series_win_rate_percentage_diff"],
-                    "latest_game_win_rate_diff": latest_match_diff["team_b_base"]["latest_game_win_rate_percentage_diff"],
-                    "win": matchup["is_team_b_win"]
-                }
-            }
-        else:
-            result = {
-                "team_a_base" : {
-                    "overall_rank_diff": overall_team_diff["team_a_base"]["rank_diff"],
-                    "overall_series_win_diff": overall_team_diff["team_a_base"]["series_win_diff"],
-                    "overall_series_loss_diff": overall_team_diff["team_a_base"]["series_loss_diff"],
-                    "overall_game_win_diff": overall_team_diff["team_a_base"]["game_win_diff"],
-                    "overall_game_loss_diff": overall_team_diff["team_a_base"]["game_loss_diff"],
-                    "head_to_head_game_win": head_to_head_diff["team_a_base"]["head_to_head_game_win"],
-                    "head_to_head_game_loss": head_to_head_diff["team_a_base"]["head_to_head_game_loss"],
-                    "head_to_head_series_win": head_to_head_diff["team_a_base"]["head_to_head_series_win"],
-                    "head_to_head_series_loss": head_to_head_diff["team_a_base"]["head_to_head_series_loss"],
-                    "latest_game_win_diff": latest_match_diff["team_a_base"]["latest_game_win_diff"],
-                    "latest_game_loss_diff": latest_match_diff["team_a_base"]["latest_game_loss_diff"],
-                    "latest_series_win_diff": latest_match_diff["team_a_base"]["latest_series_win_diff"],
-                    "latest_series_loss_diff": latest_match_diff["team_a_base"]["latest_series_loss_diff"],
-                    "playoff_h2h_win": 0,
-                    "playoff_h2h_loss": 0,
-                    "playoff_upper_bracket_win_diff": 0,
-                    "playoff_lower_bracket_win_diff": 0,
-                    "is_grand_final":0,
-                    "win": matchup["is_team_a_win"]
-                },
-                "team_b_base" : {
-                    "overall_rank_diff": overall_team_diff["team_b_base"]["rank_diff"],
-                    "overall_series_win_diff": overall_team_diff["team_b_base"]["series_win_diff"],
-                    "overall_series_loss_diff": overall_team_diff["team_b_base"]["series_loss_diff"],
-                    "overall_game_win_diff": overall_team_diff["team_b_base"]["game_win_diff"],
-                    "overall_game_loss_diff": overall_team_diff["team_b_base"]["game_loss_diff"],
-                    "head_to_head_game_win": head_to_head_diff["team_b_base"]["head_to_head_game_win"],
-                    "head_to_head_game_loss": head_to_head_diff["team_b_base"]["head_to_head_game_loss"],
-                    "head_to_head_series_win": head_to_head_diff["team_b_base"]["head_to_head_series_win"],
-                    "head_to_head_series_loss": head_to_head_diff["team_b_base"]["head_to_head_series_loss"],
-                    "latest_game_win_diff": latest_match_diff["team_b_base"]["latest_game_win_diff"],
-                    "latest_game_loss_diff": latest_match_diff["team_b_base"]["latest_game_loss_diff"],
-                    "latest_series_win_diff": latest_match_diff["team_b_base"]["latest_series_win_diff"],
-                    "latest_series_loss_diff": latest_match_diff["team_b_base"]["latest_series_loss_diff"],
-                    "playoff_h2h_win": 0,
-                    "playoff_h2h_loss": 0,
-                    "playoff_upper_bracket_win_diff": 0,
-                    "playoff_lower_bracket_win_diff": 0,
-                    "is_grand_final":0,
-                    "win": matchup["is_team_b_win"]
-                }
-            }
-        pprint([team_a, team_b])
-        pprint(latest_match_diff)
-        csv([result["team_a_base"], result["team_b_base"]], dataset_name)
+for index, (matchups, matches) in enumerate(seasons, start=1):
+    standings = get_team_records(matches) 
+    get_season_dataset(matchups, standings, matches, "datasets/id/season_14.csv")
+    print(f" Season #{index}")
 
 
 for index, (matchups, matches) in enumerate(seasons, start=1):
     standings = get_team_records(matches)
-    get_matchups(matchups, standings, matches)
-    print(f" Season #{index}")
 
+    # Season + upper quarter → predict upper semi final
+    get_playoff_dataset(
+        matchups,
+        standings,
+        matches,
+        preload_stages=[
+            "is_upper_quarter_final"
+        ],
+        target_stage="is_upper_semi_final",
+        dataset_name="datasets/id/upper_semi_final_14.csv"
+    )
+
+    # Season + upper quarter + upper semi → predict lower semi final
+    get_playoff_dataset(
+        matchups,
+        standings,
+        matches,
+        preload_stages=[
+            "is_upper_quarter_final",
+            "is_upper_semi_final"
+        ],
+        target_stage="is_lower_semi_final",
+        dataset_name="datasets/id/lower_semi_final_14.csv"
+    )
+
+    # # Season + upper quarter + upper semi + lower semi → predict upper final
+    get_playoff_dataset(
+        matchups,
+        standings,
+        matches,
+        preload_stages=[
+            "is_upper_quarter_final",
+            "is_upper_semi_final",
+            "is_lower_semi_final"
+        ],
+        target_stage="is_upper_final",
+        dataset_name="datasets/id/upper_final_14.csv"
+    )
+
+    # # Season + upper quarter + upper semi + lower semi + upper final → predict lower final
+    get_playoff_dataset(
+        matchups,
+        standings,
+        matches,
+        preload_stages=[
+            "is_upper_quarter_final",
+            "is_upper_semi_final",
+            "is_lower_semi_final",
+            "is_upper_final"
+        ],
+        target_stage="is_lower_final",
+        dataset_name="datasets/id/lower_final_14.csv"
+    )
+
+    # # Everything before grand final → predict grand final
+    get_playoff_dataset(
+        matchups,
+        standings,
+        matches,
+        preload_stages=[
+            "is_upper_quarter_final",
+            "is_upper_semi_final",
+            "is_lower_semi_final",
+            "is_upper_final",
+            "is_lower_final"
+        ],
+        target_stage="is_grand_final",
+        dataset_name="datasets/id/grand_final_14.csv"
+    )
+
+    print(f"Season #{index}")

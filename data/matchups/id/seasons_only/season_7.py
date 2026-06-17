@@ -1,7 +1,7 @@
 matchups = [
     {
         "team_a": "RRQ",
-        "team_b": "Aero",
+        "team_b": "AERO",
         "is_team_a_win": 0,
         "is_team_b_win": 1
     },
@@ -13,7 +13,7 @@ matchups = [
     },
     {
         "team_a": "EVOS",
-        "team_b": "Aero",
+        "team_b": "AERO",
         "is_team_a_win": 1,
         "is_team_b_win": 0
     },
@@ -24,7 +24,7 @@ matchups = [
         "is_team_b_win": 1
     },
     {
-        "team_a": "Aero",
+        "team_a": "AERO",
         "team_b": "ONIC",
         "is_team_a_win": 1,
         "is_team_b_win": 0

@@ -10,7 +10,7 @@ standings = get_team_records(matches)
 for matchup in matchups:
     team_a = matchup["team_a"]
     team_b = matchup["team_b"]
-    model_name = "models/id/mlbb-id-14-rate.pkl"
+    model_name = "models/id/face_off_14.pkl"
     model = joblib.load(model_name)
     result = predict_matchup(model_name, standings, matches, team_a, team_b)
 

@@ -7,7 +7,7 @@ matchups = [
     },
     {
         "team_a": "EVOS",
-        "team_b": "Aero",
+        "team_b": "AERO",
         "is_team_a_win": 1,
         "is_team_b_win": 0
     },
