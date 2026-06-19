@@ -1,5 +1,83 @@
 from collections import defaultdict
 from pprint import pprint
+
+UPPER_STAGES = [
+    "is_upper_quarter_final",
+    "is_upper_semi_final",
+    "is_upper_final",
+]
+
+def calculate_rate(win, loss):
+    total = win + loss
+    return round((win / total) * 100, 2) if total else 0
+
+
+def empty_upper_record():
+    return {
+        "upper_appearance": 0,
+        "upper_game_win": 0,
+        "upper_game_loss": 0,
+        "upper_game_win_rate": 0,
+    }
+
+
+def update_upper_record(record, game_win, game_loss):
+    record["upper_appearance"] += 1
+    record["upper_game_win"] += game_win
+    record["upper_game_loss"] += game_loss
+    record["upper_game_win_rate"] = calculate_rate(
+        record["upper_game_win"],
+        record["upper_game_loss"]
+    )
+
+
+def get_upper_records_before_stage(matchups, target_stage):
+    records = {}
+
+    # only stages before target_stage
+    target_index = UPPER_STAGES.index(target_stage)
+    preload_stages = UPPER_STAGES[:target_index]
+
+    for matchup in matchups:
+        # skip if not previous upper stage
+        if not any(matchup.get(stage) == 1 for stage in preload_stages):
+            continue
+
+        team_a = matchup["team_a"]
+        team_b = matchup["team_b"]
+
+        records.setdefault(team_a, empty_upper_record())
+        records.setdefault(team_b, empty_upper_record())
+
+        update_upper_record(
+            records[team_a],
+            matchup["team_a_score"],
+            matchup["team_b_score"]
+        )
+
+        update_upper_record(
+            records[team_b],
+            matchup["team_b_score"],
+            matchup["team_a_score"]
+        )
+
+    return records
+
+
+def get_upper_playoff_diff(matchups, team_a, team_b, target_stage):
+    records = get_upper_records_before_stage(matchups, target_stage)
+
+    a = records.get(team_a, empty_upper_record())
+    b = records.get(team_b, empty_upper_record())
+
+    return {
+        "upper_bracket_appearance_diff":
+            a["upper_appearance"] - b["upper_appearance"],
+
+        "upper_game_win_rate_diff":
+            round(a["upper_game_win_rate"] - b["upper_game_win_rate"], 2),
+    }
+
 def get_latest_match_diff(matches, team_a, team_b):
     a = get_latest_matches_record(matches, team_a)
     b = get_latest_matches_record(matches, team_b)
